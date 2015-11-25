@@ -60,11 +60,13 @@ function Game(boardElm, boardBackgroundElm){
         board.setGo(r, c, color);
 
         var result = board.getGameResult(r, c, color);
-
+		var youwin = new Audio(); 
+		youwin.src = "sounds/winner.wav";
         if(result === "draw"){
             this.draw();
         }else if(result === "win"){
             this.win();
+			youwin.play();
             board.winChange(r, c, color);
         }else{
             this.update(r, c, color);
