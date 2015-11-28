@@ -116,7 +116,10 @@ $(document).ready(function(){
 
 function showWinDialog(game){
     gameInfo.setBlinking(false);
+	var win = new Audio(); 
     if(game.mode === 'hvh'){
+		win.src = "sounds/winner.wav";
+		win.play();
         var who=(function(string){ return string.charAt(0).toUpperCase() + string.slice(1);})(game.getCurrentPlayer().color);
         $("#game-won h4").html(who+' Won!');
         gameInfo.value=who+' won.'
@@ -124,15 +127,19 @@ function showWinDialog(game){
         $('#happy-outer').fadeIn(500);
     }else{
         if(game.getCurrentPlayer() instanceof HumanPlayer){
+			win.src = "sounds/winner.wav";
+			win.play();			
             $("#game-won h4").html('You Won!');
             $("#win-content").html('You won the game. Play again?');
             gameInfo.value='You won.'
-            $('#sad-outer').fadeIn(500);
+            $('#happy-outer').fadeIn(500);
         }else{
+			win.src = "sounds/lostmatch.wav";
+			win.play();			
             $("#game-won h4").html('You Lost.');
             $("#win-content").html('Meh. You lost to the computer. Play again?');
             gameInfo.value='Computer won.'
-            $('#happy-outer').fadeIn(500);
+            $('#sad-outer').fadeIn(500);
         }
     }
 }
