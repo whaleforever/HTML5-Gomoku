@@ -125,7 +125,12 @@ function showWinDialog(game){
         $("#game-won h4").html(who+' Won!');
         gameInfo.value=who+' won.'
         $("#win-content").html(who+' won the game. Play again?');
-        $('#happy-outer').fadeIn(500);
+        // $('#happy-outer').fadeIn(500);
+        if (who=='Black'){
+          $("#black-win").fadeIn(500);
+        } else {
+          $("#white-win").fadeIn(500);
+        }
     }else{
         if(game.getCurrentPlayer() instanceof HumanPlayer){
       			win.src = config.sound.win;
