@@ -141,7 +141,7 @@ var Board = function(boardElm, backgroundElm){
 
     this.setGo = function(r, c, color){
 		var bleep = new Audio(); 
-		bleep.src = "sounds/hitsound.wav";		
+		bleep.src = "sounds/Cat.ogg";		
         places[r][c].set(color);
         setNum++;
 		bleep.play();
