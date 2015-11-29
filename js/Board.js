@@ -9,7 +9,7 @@ function Place(r, c, board){
     s.bottom = 100-(r+1)/15*100+'%',
     s.position = 'absolute';
     var inner = document.createElement("div");
-    inner.className = "go";
+    inner.className = "go animated bounceIn";
     elm.appendChild(inner);
 
     if("ontouchstart" in window){
