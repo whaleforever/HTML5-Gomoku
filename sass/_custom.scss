@@ -1,0 +1,26 @@
+@mixin go {
+  width: 100%;
+ 	height: 100%;
+ 	display: block;
+ 	position: absolute;
+ 	left: 0;
+}
+
+@mixin go-piece($image_url){
+  background: $image_url;
+  background-size:100%;
+  background-repeat: no-repeat;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+@mixin go-black(){
+  @include go-piece($piece-black-image);
+}
+
+@mixin go-white(){
+  @include go-piece($piece-white-image);
+}
