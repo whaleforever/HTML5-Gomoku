@@ -140,11 +140,11 @@ var Board = function(boardElm, backgroundElm){
     };
 
     this.setGo = function(r, c, color){
-		var bleep = new Audio(); 
-		bleep.src = "sounds/hitsound.wav";		
+    		var bleep = new Audio();
+    		bleep.src = config.sound.setGo; //"sounds/hitsound.wav";
         places[r][c].set(color);
         setNum++;
-		bleep.play();
+		    bleep.play();
     };
 
     this.unsetGo = function(r, c){

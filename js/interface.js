@@ -8,23 +8,23 @@ $(document).ready(function(){
     adjustSize();
     $.mobile.defaultDialogTransition = 'flip';
     $.mobile.defaultPageTransition = 'flip';
-    
+
     $('#mode-select input[type="radio"]').on('change', function(){
         gameData.mode=$(this).val();
     });
-    
+
     $('#color-select input[type="radio"]').on('change', function(){
         gameData.color=$(this).val();
     });
-    
+
     $('#level-select input[type="radio"]').on('change', function(){
         gameData.level=$(this).val();
     });
-    
+
     $('.back-to-game').on('tap',function(){
         $.mobile.changePage('#game-page');
     });
-    
+
     $("#start-game").on('click',function(){
         try{
             game.white.worker.terminate();
@@ -53,12 +53,12 @@ $(document).ready(function(){
     $("#undo-button").on('tap', function(){
         game.undo();
     });
-    
+
     $('.fullscreen-wrapper').on('tap', function(){
         $(this).hide();
         $.mobile.changePage('#game-won');
     });
-    
+
     $('#new-game').page();
     $('#game-won').page();
     gameData.load();
@@ -116,10 +116,10 @@ $(document).ready(function(){
 
 function showWinDialog(game){
     gameInfo.setBlinking(false);
-	var win = new Audio(); 
+	   var win = new Audio();
     if(game.mode === 'hvh'){
-		win.src = "sounds/winner.wav";
-		win.play();
+    		win.src = config.sound.win;
+    		win.play();
         var who=(function(string){ return string.charAt(0).toUpperCase() + string.slice(1);})(game.getCurrentPlayer().color);
         $("#game-won h4").html(who+' Won!');
         gameInfo.value=who+' won.'
@@ -127,15 +127,15 @@ function showWinDialog(game){
         $('#happy-outer').fadeIn(500);
     }else{
         if(game.getCurrentPlayer() instanceof HumanPlayer){
-			win.src = "sounds/winner.wav";
-			win.play();			
+      			win.src = config.sound.win;
+      			win.play();
             $("#game-won h4").html('You Won!');
             $("#win-content").html('You won the game. Play again?');
             gameInfo.value='You won.'
             $('#happy-outer').fadeIn(500);
         }else{
-			win.src = "sounds/lostmatch.wav";
-			win.play();			
+      			win.src = config.sound.lost;
+      			win.play();
             $("#game-won h4").html('You Lost.');
             $("#win-content").html('Meh. You lost to the computer. Play again?');
             gameInfo.value='Computer won.'

@@ -60,6 +60,7 @@ function Game(boardElm, boardBackgroundElm){
         board.setGo(r, c, color);
 
         var result = board.getGameResult(r, c, color);
+
         if(result === "draw"){
             this.draw();
         }else if(result === "win"){
@@ -110,7 +111,7 @@ function Game(boardElm, boardBackgroundElm){
     };
 
     this.init = function(player1, player2){
-        console.log(player1, player2);
+        // console.log(player1, player2);
         this.rounds = 0;
         history = [];
         board.init();
