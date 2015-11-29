@@ -3,4 +3,5 @@ gomoku.sublime-project
 gomoku.sublime-workspace
 *.bak
 *.log
+*.orig
 bower_components

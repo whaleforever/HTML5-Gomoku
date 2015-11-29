@@ -1,6 +1,6 @@
 var config = {
   sound:{
-    setGo: "sounds/hitsound.wav",
+    setGo: "sounds/Cat.ogg",
     win: "sounds/winner.wav",
     lost: "sounds/lostmatc.wav",
   }
