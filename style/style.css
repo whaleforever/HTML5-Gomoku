@@ -95,12 +95,12 @@
 /* line 111, ../sass/_game.scss */
 body {
   font-family: Helvetica,Arial,sans-serif;
-  background: url(woodfloor.jpg);
-  background: -webkit-radial-gradient(center, ellipse cover, transparent 35%, rgba(0, 0, 0, 0.9) 100%), url(woodfloor.jpg);
-  background: -moz-radial-gradient(center, ellipse cover, transparent 35%, rgba(0, 0, 0, 0.9) 100%), url(woodfloor.jpg);
-  background: -o-radial-gradient(center, ellipse cover, transparent 35%, rgba(0, 0, 0, 0.9) 100%), url(woodfloor.jpg);
-  background: -ms-radial-gradient(center, ellipse cover, transparent 35%, rgba(0, 0, 0, 0.9) 100%), url(woodfloor.jpg);
-  background: radial-gradient(ellipse cover at center, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.9) 100%), url(woodfloor.jpg);
+  background: url("small-cat-paw.png");
+  background: -webkit-radial-gradient(center, ellipse cover, transparent 35%, rgba(0, 0, 0, 0.9) 100%), url("small-cat-paw.png");
+  background: -moz-radial-gradient(center, ellipse cover, transparent 35%, rgba(0, 0, 0, 0.9) 100%), url("small-cat-paw.png");
+  background: -o-radial-gradient(center, ellipse cover, transparent 35%, rgba(0, 0, 0, 0.9) 100%), url("small-cat-paw.png");
+  background: -ms-radial-gradient(center, ellipse cover, transparent 35%, rgba(0, 0, 0, 0.9) 100%), url("small-cat-paw.png");
+  background: radial-gradient(ellipse cover at center, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.9) 100%), url("small-cat-paw.png");
 }
 
 /* line 122, ../sass/_game.scss */

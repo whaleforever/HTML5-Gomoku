@@ -110,13 +110,13 @@
 
  body {
  	font-family: Helvetica,Arial,sans-serif;
- 	background: url(woodfloor.jpg);
+ 	background: $big-background;//url(woodfloor.jpg);
 
- 	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), url(woodfloor.jpg);
- 	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), url(woodfloor.jpg);
- 	background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), url(woodfloor.jpg);
- 	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), url(woodfloor.jpg);
- 	background: radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), url(woodfloor.jpg);
+ 	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), $big-background;
+ 	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), $big-background;
+ 	background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), $big-background;
+ 	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), $big-background;
+ 	background: radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), $big-background;
  }
 
  .no-background {
