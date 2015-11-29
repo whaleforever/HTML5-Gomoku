@@ -1,0 +1,19 @@
+{
+  "name": "HTML5-Gomoku",
+  "version": "0.0.0",
+  "homepage": "https://github.com/whaleforever/HTML5-Gomoku",
+  "authors": [
+    "whale <onpeci@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "~3.4.0"
+  }
+}

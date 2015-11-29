@@ -2,3 +2,5 @@
 gomoku.sublime-project
 gomoku.sublime-workspace
 *.bak
+*.log
+bower_components
