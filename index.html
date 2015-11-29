@@ -13,11 +13,15 @@
 
 	<title>Gomoku</title>
 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script> -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-	<link rel="stylesheet" href="style/w.min.css" />
+
+	<!-- <link rel="stylesheet" href="style/w.min.css" /> -->
 	<link rel='stylesheet' href='style/style.css' type='text/css'/>
 	<link rel="stylesheet" href="bower_components/animate.css/animate.css">
 
@@ -41,7 +45,7 @@
 </div>
 
 <div data-role='page' data-theme='w' id='game-page' class='no-background'>
-	<div data-role='content' class='center no-padding'>
+	<div role="main" class='center no-padding'>
 		<div id='game-region'>
 			<header class='game-ult'>Gomoku</header>
 			<div id='game-info' class='game-ult ui-bar ui-bar-e'>
@@ -67,16 +71,16 @@
 	</div>
 </div>
 
-<div id='game-won' data-theme='e' data-role='dialog'>
+<div id='game-won' data-theme='a' data-role="page" data-dialog="true">
 	<div data-role='header'>
 		<h4>You Win!</h4>
 	</div>
-	<div data-role='content'>
+	<div role="main" class="ui-content">
 		<div id='win-content'>
 			You have won the game! Play again?
 		</div>
 		<fieldset class="ui-grid-a">
-			<div class="ui-block-a"><button class='back-to-game'  data-theme='c'>Back</button></div>
+			<div class="ui-block-a"><button class='back-to-game'  data-theme='a'>Back</button></div>
 			<div class="ui-block-b">
 				<a href='#new-game' data-rel='dialog' data-role='button' data-icon="grid">
 					Start A New Game
@@ -86,57 +90,57 @@
 	</div>
 </div>
 
-<div id='new-game'  data-theme='e' data-role='dialog' class='long-dialog'>
+<div id='new-game'  data-theme='a' data-role='page' data-dialog="true" class='long-dialog'>
 	<div data-role='header'>
 		<h4>New Game</h4>
 	</div>
-	<div data-role='content'>
-		<fieldset data-role="controlgroup"  data-theme='e' id='mode-select'>
+	<div data-role='main' class="ui-content">
+		<fieldset data-role="controlgroup"  data-theme='a' id='mode-select'>
 			<legend>Play with</legend>
-				<input type="radio" name="radio-choice-1" id="radio-choice-1" value="vshuman"/>
-				<label for="radio-choice-1">Human</label>
+			<input type="radio" name="radio-play-type" id="radio-choice-human" value="vshuman"/>
+			<label for="radio-choice-human">Human</label>
 
-				<input type="radio" name="radio-choice-1" id="radio-choice-2" value="vscomputer"  />
-				<label for="radio-choice-2">Computer</label>
+			<input type="radio" name="radio-play-type" id="radio-choice-ai" value="vscomputer"  />
+			<label for="radio-choice-ai">Computer</label>
 		</fieldset>
+		<div class="vs-computer">
+			<fieldset data-role="controlgroup" data-theme='a' id='color-select'>
+				<legend>Your Color</legend>
+					<input type="radio" name="radio-player-color" id="radio-choice-black" value="black" data-theme='b'  />
+					<label for="radio-choice-black">Black</label>
 
-		<fieldset data-role="controlgroup" data-theme='e' id='color-select' class='vs-computer'>
-			<legend>Your Color</legend>
-				<input type="radio" name="radio-choice-1" id="radio-choice-2" value="black" data-theme='a'  />
-				<label for="radio-choice-2">Black</label>
+					<input type="radio" name="radio-player-color" id="radio-choice-white" value="white" data-theme='a' />
+					<label for="radio-choice-white">White</label>
+			</fieldset>
 
-				<input type="radio" name="radio-choice-1" id="radio-choice-1" value="white" data-theme='c' />
-				<label for="radio-choice-1">White</label>
-		</fieldset>
+			<fieldset data-role="controlgroup"  data-theme='a' id='level-select'>
+				<legend>Level Of Difficulty</legend>
 
-		<fieldset data-role="controlgroup"  data-theme='e' id='level-select'  class='vs-computer'>
-			<legend>Level Of Difficulty</legend>
+					<input type="radio" name="radio-difficulties" id="radio-choice-novice" value="novice" />
+					<label for="radio-choice-novice">Novice</label>
 
-				<input type="radio" name="radio-choice-1" id="radio-choice-1" value="novice" />
-				<label for="radio-choice-1">Novice</label>
+					<input type="radio" name="radio-difficulties" id="radio-choice-medium" value="medium"  />
+					<label for="radio-choice-medium">Medium</label>
 
-				<input type="radio" name="radio-choice-1" id="radio-choice-2" value="medium"  />
-				<label for="radio-choice-2">Medium</label>
-
-				<input type="radio" name="radio-choice-1" id="radio-choice-3" value="expert"  />
-				<label for="radio-choice-3">Expert</label>
-
-		</fieldset>
-		<fieldset class="ui-grid-a">
-			<div class="ui-block-a"><button class='back-to-game'  data-theme='c'>Back</button></div>
-			<div class="ui-block-b"><button id='start-game'  data-theme='b'>Start</button></div>
-		</fieldset>
+					<input type="radio" name="radio-difficulties" id="radio-choice-expert" value="expert"  />
+					<label for="radio-choice-expert">Expert</label>
+			</fieldset>
+		</div>
+	</div>
+	<div data-role="footer">
+		<button id='back-to-game' data-theme='a'>Back</button>
+		<button id='start-game' data-theme='b'>Start</button>
 	</div>
 </div>
 
-<div data-role='dialog' data-theme='e' id='help-page'>
+<div data-role="page" data-dialog="true" data-theme='a' id='help-page'>
 	<div data-role='header'>
 		<h4>About</h4>
 	</div>
-	<div data-role='content' class='thin-content'>
-		<p>This game created for homework to proof a concept that a single game my be more fun if there is some juicy on it</p>
-		<p>modified by Firdan Machda and Sandy TG</p>
-		<p>Gomoku based on Yujian check out <a href='http://yjyao.com'>his website</a></p>
+	<div role="main" class="ui-content" class='thin-content'>
+		<p>This game created for homework to proof a concept that a single game maybe more fun if there is some juicy on it.</p>
+		<p>Modified by Firdan Machda and Sandy TG.</p>
+		<p>Gomoku based on Yujian check out <a href='http://yjyao.com'>his website</a>.</p>
 	</div>
 </div>
 </body>

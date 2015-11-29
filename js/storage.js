@@ -39,7 +39,7 @@ gameData.addRecord('mode', 'vscomputer', function(val){
     $('#mode-select input[type="radio"]').checkboxradio('refresh');
     if(val=='vshuman'){
         $('.vs-computer').hide();
-    }else $('.vs-computer').show();
+    } else $('.vs-computer').show();
 });
 gameData.addRecord('color', 'black', function(val){
     $('#color-select input[value="'+val+'"]').attr('checked',true);

@@ -14,6 +14,8 @@
     "tests"
   ],
   "dependencies": {
-    "animate.css": "~3.4.0"
+    "animate.css": "~3.4.0",
+    "jquery-ui-flat-theme": "*",
+    "jquery-mobile-flat-ui-theme": "git@github.com:ququplay/jquery-mobile-flat-ui-theme.git#master"
   }
 }

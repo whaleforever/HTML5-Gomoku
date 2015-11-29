@@ -21,7 +21,7 @@ $(document).ready(function(){
         gameData.level=$(this).val();
     });
 
-    $('.back-to-game').on('tap',function(){
+    $('#back-to-game').on('tap',function(){
         $.mobile.changePage('#game-page');
     });
 
@@ -47,7 +47,7 @@ $(document).ready(function(){
         }
         $.mobile.changePage('#game-page');
         game.start();
-        setTimeout(function(){$('.back-to-game').button('enable');},100);
+        setTimeout(function(){$('#back-to-game').removeClass('ui-disabled');},100);
     });
 
     $("#undo-button").on('tap', function(){
@@ -62,7 +62,8 @@ $(document).ready(function(){
     $('#new-game').page();
     $('#game-won').page();
     gameData.load();
-    $('.back-to-game').button('disable');
+    $("#back-to-game").addClass('ui-disabled');
+    // $("button#back-to-game").button('disable');
     $.mobile.changePage('#new-game',{changeHash: false});
 
     window.gameInfo = (function(){
