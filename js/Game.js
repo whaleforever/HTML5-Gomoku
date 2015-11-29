@@ -60,7 +60,6 @@ function Game(boardElm, boardBackgroundElm){
         board.setGo(r, c, color);
 
         var result = board.getGameResult(r, c, color);
-
         if(result === "draw"){
             this.draw();
         }else if(result === "win"){
