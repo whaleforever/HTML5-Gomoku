@@ -1,13 +1,12 @@
-# Gomoku (with AI!) written with HTML5 technology
+# Nyaan Gomoku
 
-The game supports both mobile and desktop (heck, it can even be an iOS webapp).
+This game is based on [yjao's Gomoku html 5 ](http://yjyao.com/2012/06/gomoku-in-html5.html), a proof of a concept that a game can be more insteresing if there is some juicy on it.
 
-I use JQuery Mobile for the interface.
-
-The AI is based on the nega-scout framework, with same caching using JavaScript Object
-as a hash table. It runs parallel to the page using the HTML5 Web Worker.
-
-Other details can be found in my [blog post](http://yjyao.com/2012/06/gomoku-in-html5.html)
-
+Created for task give by our instructor, [click here](http://gomoku.whalesteward.com) for demo.
 ## License
 MIT
+
+### Notes
+if we forget to include you or someone in the credits please feel free to contact me by rise an issue, and I'll update accordingly.
+
+Thank you.
